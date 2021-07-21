@@ -5,7 +5,6 @@ using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using YogaMaster.Core.Services;
-using YogaMaster.Services;
 using YogaMaster.Shared;
 using YogaMaster.Shared.Services;
 using YogaMaster.Views;

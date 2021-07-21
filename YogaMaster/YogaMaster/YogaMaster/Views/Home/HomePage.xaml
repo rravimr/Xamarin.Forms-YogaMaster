@@ -30,7 +30,7 @@
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
                 <Label Text="Yoga Master" FontSize="Title"/>
-                <Label Text="Yoga Master provides Timer is an easy to use and discreet timer app especially made for yoga, meditation and other workouts where you don't want to interact with your timer alarms during your exercises. With Yoga Timer there is no need for you to interrupt yourself to silence any timer alarms, instead you are discretely notified that the time is up for that part and then it automatically continues with the next timer." FontSize="16" Padding="0,0,0,0"/>
+                <Label Text="Yoga Master is a Xamarin.Forms app. An ergonomically easy to use timer app especially made for meditation, yoga, workouts and other personal wellness activities where you can set timers without interrupting your regular alarm timers." FontSize="16" Padding="0,0,0,0"/>
             </StackLayout>
         </ScrollView>
     </Grid>
