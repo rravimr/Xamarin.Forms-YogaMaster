@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\ravisankar\Desktop\icons\Logo.PNG</Source>
+    <SmallTileSource>C:\Users\ravisankar\Desktop\icons\Logo.PNG</SmallTileSource>
+    <MediumTileSource>C:\Users\ravisankar\Desktop\icons\Logo.PNG</MediumTileSource>
+    <WideTileSource>C:\Users\ravisankar\Desktop\icons\Logo.PNG</WideTileSource>
+    <LargeTileSource>C:\Users\ravisankar\Desktop\icons\Logo.PNG</LargeTileSource>
+    <AppIconSource>C:\Users\ravisankar\Desktop\icons\Logo.PNG</AppIconSource>
+    <SplashScreenSource>C:\Users\ravisankar\Desktop\icons\Logo.PNG</SplashScreenSource>
+    <PackageLogoSource>C:\Users\ravisankar\Desktop\icons\Logo.PNG</PackageLogoSource>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:PageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                 x:Class="YogaMaster.Views.TimerExecutionPage"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+               xmlns:views="clr-namespace:YogaMaster.Shared"
+                xmlns:controls="clr-namespace:YogaMaster.Shared.Controls"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:viewmodels="clr-namespace:YogaMaster.ViewModels"
+                 xmlns:rv="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+                x:Name="rootTimerExecutionPage"
+    Title="{Binding Title}"
+              x:DataType="viewmodels:TimerExectuesViewModel"
+    x:TypeArguments="viewmodels:TimerExectuesViewModel"
+    mc:Ignorable="d">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="Header" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout >
+            <StackLayout HorizontalOptions="FillAndExpand" Padding="{StaticResource MarginValue}">
+                <Label Style="{StaticResource Header}" Text="InHale" />
+                <rv:MaterialFrame 
+                Padding="{StaticResource MarginValue}"
+                CornerRadius="4" 
+                HasShadow="True"
+                IsClippedToBounds="True">
+                    <StackLayout  HorizontalOptions="CenterAndExpand" x:Name="InhaleContainer">
+                        <Label FontSize="40" Text="{Binding InHaleText}" />
+                    </StackLayout>
+                </rv:MaterialFrame>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand" Padding="{StaticResource MarginValue}">
+                <Label Style="{StaticResource Header}" Text="Hold" />
+                <rv:MaterialFrame 
+                Padding="{StaticResource MarginValue}"
+                CornerRadius="4" 
+                HasShadow="True"
+                IsClippedToBounds="True">
+                    <StackLayout  HorizontalOptions="CenterAndExpand" x:Name="HoldContainer">
+                        <Label FontSize="40" Text="{Binding HoldText}" />
+                    </StackLayout>
+                </rv:MaterialFrame>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand" Padding="{StaticResource MarginValue}">
+                <Label Style="{StaticResource Header}" Text="ExHale" />
+                <rv:MaterialFrame 
+                Padding="{StaticResource MarginValue}"
+                CornerRadius="4" 
+                HasShadow="True"
+                IsClippedToBounds="True">
+                    <StackLayout  HorizontalOptions="CenterAndExpand" x:Name="ExHaleContainer">
+                        <Label FontSize="40" Text="{Binding ExHaleText}" />
+                    </StackLayout>
+                </rv:MaterialFrame>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" Padding="{StaticResource MarginValue}">
+                <Label Style="{StaticResource Header}" Text="Minutes" />
+                <rv:MaterialFrame 
+                Padding="{StaticResource MarginValue}"
+                CornerRadius="4" 
+                HasShadow="True"
+                IsClippedToBounds="True">
+                    <StackLayout  HorizontalOptions="CenterAndExpand" x:Name="MinContainer">
+                        <Label FontSize="40" Text="{Binding TimerText}" />
+                    </StackLayout>
+                </rv:MaterialFrame>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</views:PageBase>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:PageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                 x:Class="YogaMaster.Views.HomePage"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+               xmlns:views="clr-namespace:YogaMaster.Shared"
+                xmlns:controls="clr-namespace:YogaMaster.Shared.Controls"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:viewmodels="clr-namespace:YogaMaster.ViewModels"
+                 xmlns:rv="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+                x:Name="rootHomePage"
+    Title="{Binding Title}"
+              x:DataType="viewmodels:HomePageViewModel"
+    x:TypeArguments="viewmodels:HomePageViewModel"
+    mc:Ignorable="d">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+            <Image Source="YogaMasterIcon.PNG" VerticalOptions="FillAndExpand" HeightRequest="80" />
+        </ContentView>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Yoga Master" FontSize="Title"/>
+                <Label Text="Yoga Master provides Timer is an easy to use and discreet timer app especially made for yoga, meditation and other workouts where you don't want to interact with your timer alarms during your exercises. With Yoga Timer there is no need for you to interrupt yourself to silence any timer alarms, instead you are discretely notified that the time is up for that part and then it automatically continues with the next timer." FontSize="16" Padding="0,0,0,0"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</views:PageBase>

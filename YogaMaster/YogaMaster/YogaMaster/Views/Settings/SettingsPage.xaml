@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:PageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                 x:Class="YogaMaster.Views.SettingsPage"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+               xmlns:views="clr-namespace:YogaMaster.Shared"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:viewmodels="clr-namespace:YogaMaster.ViewModels"
+                 xmlns:rv="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+                x:Name="rootPage"
+    Title="{Binding Title}"
+              x:DataType="viewmodels:SettingsViewModel"
+    x:TypeArguments="viewmodels:SettingsViewModel"
+    mc:Ignorable="d">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="Header" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout  Orientation="Vertical" Spacing="30" Padding="{StaticResource MarginValue}">
+            <Label Style="{StaticResource Header}" Text="Preferences" />
+            <rv:MaterialFrame
+                Padding="{StaticResource MarginValue}"
+                CornerRadius="4"
+                HasShadow="True"
+                IsClippedToBounds="True">
+                <StackLayout Spacing="20">
+                    <Grid
+                        ColumnDefinitions="*,Auto,Auto,Auto,*"
+                        ColumnSpacing="10"
+                        RadioButtonGroup.GroupName="ThemeGroup"
+                        RowDefinitions="Auto,Auto"
+                        RowSpacing="10">
+                        <RadioButton
+                            x:Name="RadioButtonSystem"
+                            Grid.Column="1" Content="System"
+                            IsChecked="{Binding UseSystem}"
+                            Value="System">
+                        </RadioButton>
+                        <RadioButton
+                            x:Name="RadioButtonLight"
+                            Grid.Column="2" Content="Light"
+                            IsChecked="{Binding UseLight}"
+                            Value="Light">
+                        </RadioButton>
+                        <RadioButton
+                            Grid.Column="3"
+                            IsChecked="{Binding UseDark}"
+                            Value="Dark" Content="Dark">
+                        </RadioButton>
+                    </Grid>
+                </StackLayout>
+            </rv:MaterialFrame>
+        </StackLayout>
+    </ScrollView>
+</views:PageBase>
