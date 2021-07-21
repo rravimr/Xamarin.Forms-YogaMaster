@@ -29,6 +29,14 @@ Contributions are welcome to use and share your ideas.
 * MVVM
 * Dependency injection
 
+# Libraries Used
+
+* Xamarin.Essentials
+* Refactored MvvmHelpers
+* Sharpnado MaterialFrame
+* Xamarin Community Toolkit
+
+
 # Development
 
 * Very open source, anyone can contribute to the app
