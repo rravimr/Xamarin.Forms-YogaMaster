@@ -39,7 +39,7 @@ Contributions are welcome to use and share your ideas.
 
 # Development
 
-* Very open source, anyone can contribute to the app
+* Open source, anyone can contribute to the app
 * Contributions are welcome
 
 
