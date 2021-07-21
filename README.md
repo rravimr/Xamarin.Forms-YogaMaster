@@ -29,5 +29,9 @@ Contributions are welcome to use and share your ideas.
 * MVVM
 * Dependency injection
 
+# Development
+
+* Very open source, anyone can contribute to the app
+* Contributions are welcome
 
 
