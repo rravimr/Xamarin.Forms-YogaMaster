@@ -1,4 +1,4 @@
-# Xamarin.Froms - YogaMaster
+# Xamarin.Forms - YogaMaster
 
-Yoga Master is a Xamarin.Forms app provides Timer is an easy to use and discreet timer app especially made for yoga, meditation and other workouts where you don't want to interact with your timer alarms during your exercises. 
+Yoga Master is a Xamarin.Forms app. An ergonomically easy to use timer app especially made for meditation, yoga, workouts and other personal wellness activities where you can set timers without interrupting your routine.
 
