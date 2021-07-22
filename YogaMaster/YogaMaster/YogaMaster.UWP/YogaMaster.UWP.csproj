@@ -127,6 +127,8 @@
     <Content Include="Assets\StoreLogo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="cog-outline.png" />
+    <Content Include="home-circle-outline.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
@@ -155,9 +157,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="xamarin_logo.png" />
-    <Content Include="icon_about.png" />
-    <Content Include="icon_feed.png" />
+    <Content Include="timer-outline.png" />
     <Content Include="YogaMasterIcon.PNG" />
   </ItemGroup>
   <ItemGroup>

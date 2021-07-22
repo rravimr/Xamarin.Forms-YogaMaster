@@ -31,9 +31,9 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="Home" Icon="icon_about.png" Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}" />
-        <ShellContent Title="Timer" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:TimerPage}" />
-        <ShellContent Title="Settings" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:SettingsPage}" />
+        <ShellContent Title="Home" Icon="home-circle-outline.png" Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}" />
+        <ShellContent Title="Timer" Icon="timer-outline.png" ContentTemplate="{DataTemplate local:TimerPage}" />
+        <ShellContent Title="Settings" Icon="cog-outline.png" ContentTemplate="{DataTemplate local:SettingsPage}" />
     </TabBar>
 
 </Shell>

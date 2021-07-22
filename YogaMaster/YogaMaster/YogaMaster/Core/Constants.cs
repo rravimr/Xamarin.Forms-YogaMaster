@@ -33,6 +33,7 @@ namespace YogaMaster.Core
         }
         public static class Preferences
         {
+            public const string OpenLinksInBrowser = "OpenLinksInBrowser";
             public const string Analytics = "Analytics";
             public const string Theme = "Theme";
         }
