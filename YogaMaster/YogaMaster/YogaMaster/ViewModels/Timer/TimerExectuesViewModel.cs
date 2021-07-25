@@ -1,6 +1,9 @@
 ﻿using MvvmHelpers.Commands;
+using Plugin.SimpleAudioPlayer;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -20,11 +23,17 @@ namespace YogaMaster.ViewModels
         private int _holdText;
 
         private int _exHaleText;
+
+        private bool isRunning { get; set; }
+
+        ISimpleAudioPlayer player;
+
+        public ICommand TimerStopCommand { get; }
         public TimerExectuesViewModel(INavigationService navigation, IAnalytics analytics, IPreferences preferences, IBrowser browser,
                              IMessagingService messagingService, IThemeService theme) : base(navigation, analytics, messagingService)
         {
-            Title = "Start Timer ";
-
+            Title = "Mind Balance";
+            TimerStopCommand = new AsyncCommand(ExecuteTimerStopCommand);
         }
 
 
@@ -76,8 +85,17 @@ namespace YogaMaster.ViewModels
             bool inHaleRunning = true;
             bool holdRunning = false;
             bool exHaleRunning = false;
+            isRunning = true;
+            var stream = GetStreamFromFile("clockTimer.wav");
+            player = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+            player.Load(stream);
             Device.StartTimer(TimeSpan.FromSeconds(1), () =>
             {
+                if(!isRunning)
+                {
+                    return false;
+                }
+                player.Play();
                 TotalSec = TotalSec + 1;
                 CountSec = CountSec + 1;
                 if (CountSec <= InHale && inHaleRunning)
@@ -129,6 +147,19 @@ namespace YogaMaster.ViewModels
             });
 
         }
+        public async Task ExecuteTimerStopCommand()
+        {
+            player.Stop();
+            isRunning = false;
+        }
 
+        private Stream GetStreamFromFile(string filename)
+        {
+            var assembly = typeof(App).GetTypeInfo().Assembly;
+
+            var stream = assembly.GetManifestResourceStream("YogaMaster." + filename);
+
+            return stream;
+        }
     }
 }

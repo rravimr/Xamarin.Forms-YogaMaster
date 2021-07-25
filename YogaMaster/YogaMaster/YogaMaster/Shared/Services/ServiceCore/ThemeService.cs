@@ -29,10 +29,8 @@ namespace YogaMaster.Shared.Services
             switch (Theme)
             {
                 //default
-                case 0:
-                    Application.Current.UserAppTheme = OSAppTheme.Unspecified;
-                    break;
                 //light
+                case 0:
                 case 1:
                     Application.Current.UserAppTheme = OSAppTheme.Light;
                     break;

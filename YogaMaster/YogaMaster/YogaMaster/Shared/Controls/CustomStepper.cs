@@ -43,6 +43,10 @@ namespace YogaMaster.Shared.Controls
                 VerticalOptions = LayoutOptions.Center,
                 HorizontalOptions = LayoutOptions.Center,
             };
+            if(Device.RuntimePlatform == Device.Android)
+            {
+                Entry.WidthRequest = 50;
+            }
             Entry.SetBinding(Entry.TextProperty, new Binding(nameof(Text), BindingMode.TwoWay, source: this));
             Entry.TextChanged += Entry_TextChanged;
             Children.Add(PlusBtn);
@@ -52,8 +56,10 @@ namespace YogaMaster.Shared.Controls
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(e.NewTextValue))
+            if (!string.IsNullOrEmpty(e.NewTextValue) && System.Text.RegularExpressions.Regex.IsMatch(e.NewTextValue, "^[0-9]+$"))
+            {
                 this.Text = int.Parse(e.NewTextValue);
+            }
         }
 
         private void MinusBtn_Clicked(object sender, EventArgs e)

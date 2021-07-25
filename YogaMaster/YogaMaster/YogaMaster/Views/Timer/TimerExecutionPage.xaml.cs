@@ -44,5 +44,11 @@ namespace YogaMaster.Views
             };
             await ViewModel.InitializeAsync(TimerValues);
         }
+        protected override async void OnDisappearing()
+        {
+            await ViewModel.ExecuteTimerStopCommand();
+            base.OnDisappearing();
+        }
+
     }
 }

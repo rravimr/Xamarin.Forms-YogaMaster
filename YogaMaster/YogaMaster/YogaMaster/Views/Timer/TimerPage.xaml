@@ -5,6 +5,7 @@
                 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
                xmlns:views="clr-namespace:YogaMaster.Shared"
                 xmlns:controls="clr-namespace:YogaMaster.Shared.Controls"
+                xmlns:Fonts="clr-namespace:YogaMaster.Shared.Materialdesignicons"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:viewmodels="clr-namespace:YogaMaster.ViewModels"
                  xmlns:rv="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
@@ -76,7 +77,14 @@
                 </rv:MaterialFrame>
             </StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="{StaticResource MarginValue}">
-                <Button Command="{Binding TimerStartCommand}" BackgroundColor="ForestGreen" VerticalOptions="Center" WidthRequest="200" HorizontalOptions="CenterAndExpand" Padding="{StaticResource MarginValue}" Text="Start"></Button>
+                <Button  Command="{Binding TimerStartCommand}" BackgroundColor="{AppThemeBinding Light={StaticResource ForestGreenLight}, Dark={StaticResource ForestGreenDark}}" VerticalOptions="Center" WidthRequest="200" HorizontalOptions="CenterAndExpand" Padding="{StaticResource MarginValue}" Text="Start">
+                    <Button.ImageSource>
+                        <FontImageSource
+            FontFamily="FontIcons"
+            Glyph="{x:Static Fonts:Materialdesignicons.ArrowRightDropCircleOutline}"
+            Size="18"/>
+                    </Button.ImageSource>
+                </Button>
             </StackLayout>
         </StackLayout>
      </ScrollView>

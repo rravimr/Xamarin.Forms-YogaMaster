@@ -3,6 +3,7 @@
                  x:Class="YogaMaster.Views.SettingsPage"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                xmlns:materialdesignicons="clr-namespace:YogaMaster.Shared.Materialdesignicons"
                xmlns:views="clr-namespace:YogaMaster.Shared"
                   xmlns:models="clr-namespace:YogaMaster.Core.Models"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -34,25 +35,19 @@
                 IsClippedToBounds="True">
                 <StackLayout Spacing="20">
                     <Grid
-                        ColumnDefinitions="*,Auto,Auto,Auto,*"
+                        ColumnDefinitions="*,Auto,Auto,*"
                         ColumnSpacing="10"
                         RadioButtonGroup.GroupName="ThemeGroup"
                         RowDefinitions="Auto,Auto"
                         RowSpacing="10">
                         <RadioButton
-                            x:Name="RadioButtonSystem"
-                            Grid.Column="1" Content="System"
-                            IsChecked="{Binding UseSystem}"
-                            Value="System">
-                        </RadioButton>
-                        <RadioButton
                             x:Name="RadioButtonLight"
-                            Grid.Column="2" Content="Light"
+                            Grid.Column="1" Content="Light"
                             IsChecked="{Binding UseLight}"
                             Value="Light">
                         </RadioButton>
                         <RadioButton
-                            Grid.Column="3"
+                            Grid.Column="2"
                             IsChecked="{Binding UseDark}"
                             Value="Dark" Content="Dark">
                         </RadioButton>
@@ -68,7 +63,7 @@
                 CornerRadius="4"
                 HasShadow="True"
                 IsClippedToBounds="True">
-                <StackLayout BindableLayout.ItemsSource="{Binding AboutLinks}" Spacing="20">
+                <StackLayout Margin="10,0,0,0" BindableLayout.ItemsSource="{Binding AboutLinks}" Spacing="20">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate x:DataType="models:LinkInfo">
                             <Label TextDecorations="Underline" Text="{Binding Text}">

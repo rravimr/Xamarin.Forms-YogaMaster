@@ -24,8 +24,8 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-            <Image Source="YogaMasterIcon.PNG" VerticalOptions="FillAndExpand" HeightRequest="80" />
+        <ContentView Padding="0,40,0,40" VerticalOptions="CenterAndExpand">
+            <Image Source="YogaMasterIcon.PNG" VerticalOptions="CenterAndExpand" HeightRequest="80" />
         </ContentView>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
