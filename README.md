@@ -7,7 +7,7 @@ Yoga Master is a Xamarin.Forms app. An ergonomically easy to use timer app espec
 
 # Goal
 
-The main goal of the app is for the developers to learn and create apps with well architecture patterns, new libraries usages, and new technolgies.
+The main goal of the app is for the developers to learn and create apps with well architecture patterns, new libraries usages, and new technologies.
 Contributions are welcome to use and share your ideas.
 
 # Functional Requirements
