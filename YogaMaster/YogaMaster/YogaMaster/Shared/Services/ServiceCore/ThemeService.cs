@@ -20,7 +20,7 @@ namespace YogaMaster.Shared.Services
 
         public int Theme
         {
-            get => preferences.Get(Constants.Preferences.Theme, 0);
+            get => preferences.Get(Constants.Preferences.Theme, 1);
             set => preferences.Set(Constants.Preferences.Theme, value);
         }
 

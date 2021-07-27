@@ -36,7 +36,7 @@ namespace YogaMaster.ViewModels
 
         public int Theme
         {
-            get => preferences.Get(Constants.Preferences.Theme, 0);
+            get => preferences.Get(Constants.Preferences.Theme, 1);
             set
             {
                 preferences.Set(Constants.Preferences.Theme, value);
@@ -44,16 +44,7 @@ namespace YogaMaster.ViewModels
             }
         }
 
-        public bool UseSystem
-        {
-            get => Theme == 0;
-            set
-            {
-                if (!value)
-                    return;
-                Theme = 0;
-            }
-        }
+
 
         public bool UseLight
         {
