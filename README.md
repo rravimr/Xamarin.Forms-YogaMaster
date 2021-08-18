@@ -4,7 +4,7 @@
 
 Yoga Master is a Xamarin.Forms app. An ergonomically easy to use timer app especially made for meditation, yoga, workouts and other personal wellness activities where you can set timers without interrupting your regular alarm timers.
 
-- Andriod: [![Build status](https://build.appcenter.ms/v0.1/apps/8efe0dfd-85fd-4ca8-901e-a5215da37e5a/branches/main/badge)](https://appcenter.ms)
+- Android : [![Build status](https://build.appcenter.ms/v0.1/apps/8efe0dfd-85fd-4ca8-901e-a5215da37e5a/branches/main/badge)](https://appcenter.ms)
 
 ![PhotoGrid_1627224068604](https://user-images.githubusercontent.com/46298553/126903987-77a2d5c2-8779-46d9-a2cf-4d3fac03b897.jpg)
 
